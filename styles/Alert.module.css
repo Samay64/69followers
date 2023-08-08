@@ -1,0 +1,72 @@
+.alert{
+  background: var(--background-default);
+  border: 1px solid var(--outline-stronger);
+  width: 90%;
+  max-width:30rem;
+  height: 10rem;
+  position: fixed;
+  top: 1%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  transition:all 200ms ease-in-out;
+  z-index:100;
+}
+
+.alertTitle{
+  font-size:1.5rem;
+  font-weight:bold;
+  width:100%;
+  padding:0 1rem;
+}
+
+.alertBody{
+  margin:1rem 0;
+  padding:0 1rem;
+  width:100%;
+}
+
+.alertBtnWrap{
+  position:absolute;
+  display:flex;
+  bottom:0;
+  width: 100%;
+  justify-content: flex-end;
+  height: 25%;
+}
+
+.alertBtn{
+  border-radius: 0.3rem;
+  margin-right:0.3rem;
+  width:5rem;
+  height:80%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:var(--btnColor);
+  color:white;
+  cursor:pointer;
+}
+
+.alertBtn:hover{
+  background:var(--btnColorHover);
+}
+
+.hide{
+  top:-30%;
+  display:none;
+}
+
+.red{
+  --btnColor:var(--accent-negative-dimmer);
+  --btnColorHover:var(--accent-negative-default)
+}
+.green{
+  --btnColor:var(--background-higher);
+  --btnColorHover:var(--background-highest)
+  
+}

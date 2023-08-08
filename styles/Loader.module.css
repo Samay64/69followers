@@ -1,0 +1,61 @@
+
+
+.container{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+  font-family: 'Belanosima',sans-serif;
+}
+
+.loader{
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:12em;
+  height: 100%;
+  width: 100%;
+  animation:spin 2s ease-in-out 500ms infinite;
+}
+
+.six{
+  position:relative;
+  left:-100%;
+  animation:come-in 1s ease 1 forwards;
+}
+.nine{
+  position:relative;
+  left:100%;
+  animation:come-in 1s ease 1 forwards;
+}
+
+
+.loadingText{
+  color:white;
+  font-size:2rem;
+  position: absolute;
+  top:30%;
+  left:50%;
+  transform: translate(-47%,-50%);
+}
+
+@keyframes come-in{
+to{
+  left:0;
+}
+}
+
+@keyframes spin{
+  0%{
+    transform:rotateZ(0deg);
+  }
+90%{
+    transform:rotateZ(1800deg);
+}
+100%{
+    transform:rotateZ(1800deg);
+}
+}

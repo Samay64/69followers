@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=IBM+Plex+Sans&family=Open+Sans&display=swap');
+
+:root { --background-root: #0E1525; --background-default: #1C2333; --background-higher: #2B3245; --background-highest: #3C445C; --background-overlay: #0e1525A0; --foreground-default: #F5F9FC; --foreground-dimmer: #C2C8CC; --foreground-dimmest: #9DA2A6; --outline-dimmest: #2B3245; --outline-dimmer: #3C445C; --outline-default: #4E5569; --outline-stronger: #5F677A; --outline-strongest: #70788C; --accent-primary-dimmest: #004182; --accent-primary-dimmer: #0053A6; --accent-primary-default: #0079F2; --accent-primary-stronger: #57ABFF; --accent-primary-strongest: #B2D9FF; --accent-positive-dimmest: #044A10; --accent-positive-dimmer: #046113; --accent-positive-default: #009118; --accent-positive-stronger: #6CD97E; --accent-positive-strongest: #BFFFCA; --accent-negative-dimmest: #660000; --accent-negative-dimmer: #A60808; --accent-negative-default: #E52222; --accent-negative-stronger: #FF6666; --accent-negative-strongest: #FFCFCF; --accent-red-dimmest: #660000; --accent-red-dimmer: #A60808; --accent-red-default: #E52222; --accent-red-stronger: #FF6666; --accent-red-strongest: #FFCFCF; --accent-orange-dimmest: #542A00; --accent-orange-dimmer: #703800; --accent-orange-default: #AD5700; --accent-orange-stronger: #D4781C; --accent-orange-strongest: #FFBD7A; --accent-yellow-dimmest: #4D4000; --accent-yellow-dimmer: #635300; --accent-yellow-default: #967D00; --accent-yellow-stronger: #BFA730; --accent-yellow-strongest: #F2E088; --accent-lime-dimmest: #314A00; --accent-lime-dimmer: #3D5C00; --accent-lime-default: #5A8700; --accent-lime-stronger: #87B825; --accent-lime-strongest: #C4E581; --accent-green-dimmest: #044A10; --accent-green-dimmer: #046113; --accent-green-default: #009118; --accent-green-stronger: #6CD97E; --accent-green-strongest: #7AEB8D; --accent-teal-dimmest: #004452; --accent-teal-dimmer: #006073; --accent-teal-default: #0093B0; --accent-teal-stronger: #27B9D6; --accent-teal-strongest: #69D9F0; --accent-blue-dimmest: #004182; --accent-blue-dimmer: #0053A6; --accent-blue-default: #0079F2; --accent-blue-stronger: #57ABFF; --accent-blue-strongest: #B2D9FF; --accent-blurple-dimmest: #39298A; --accent-blurple-dimmer: #5239CC; --accent-blurple-default: #795EFF; --accent-blurple-stronger: #A694FF; --accent-blurple-strongest: #CEC4FF; --accent-purple-dimmest: #582987; --accent-purple-dimmer: #7633B8; --accent-purple-default: #A64DFF; --accent-purple-stronger: #C78FFF; --accent-purple-strongest: #E2C4FF; --accent-magenta-dimmest: #6B1A6B; --accent-magenta-dimmer: #8A218A; --accent-magenta-default: #C73AC7; --accent-magenta-stronger: #F562F5; --accent-magenta-strongest: #FFBFFF; --accent-pink-dimmest: #6E1B52; --accent-pink-dimmer: #8F226B; --accent-pink-default: #D4359F; --accent-pink-stronger: #FF70CF; --accent-pink-strongest: #FFBAE8; --accent-grey-dimmest: #404040; --accent-grey-dimmer: #545454; --accent-grey-default: #808080; --accent-grey-stronger: #A6A6A6; --accent-grey-strongest: #D4D4D4; --accent-brown-dimmest: #594031; --accent-brown-dimmer: #75503B; --accent-brown-default: #A3765C; --accent-brown-stronger: #D49877; --accent-brown-strongest: #FFC8A8; --black: #0E1525; --white: #FCFCFC; } 
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	background: var(--background-root);
+	font-family: "IBM Plex Sans", sans-serif;
+}
+
+body::-webkit-scrollbar{
+  background:var(--background-default);
+  width:12px;
+}
+body::-webkit-scrollbar-thumb{
+  background:var(--background-highest)
+}
+
+* {
+	box-sizing: border-box;
+	color: var(--foreground-default);
+	outline:none;
+	transition: .2s;
+  border:none;
+  text-decoration:none;
+}
+
+.main-content {
+	width: 80vw;
+	height: 100%;
+	margin-bottom: 1rem;
+}
+
+.user {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	width: 100%;
+}
+
+.username {
+	font-size: 2rem;
+}
+
+.pfp {
+	width: 8rem;
+	height: 8rem;
+	border-radius: 200%;
+	box-shadow: 0 0 2rem var(--outline-strongest);
+}
+
+.description {
+	color: var(--foreground-dimmer);
+}
+
+.heading {
+	font-size: 1.6rem;
+	background: transparent;
+	width: fit-content;
+	text-shadow: 0 0 2rem var(--outline-strongest);
+	margin-bottom: 0.5rem;
+	margin-top: 1rem;
+}
+
+.section {
+	flex-grow: 1;
+	max-width: calc(100% / 2 - 1rem);
+}
+
+.sections {
+	display: flex;
+	gap: 2rem;
+	flex-wrap: wrap;
+}
+
+.projects {
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
+}
+
+.project {
+	width: 100%;
+	background: var(--background-default);
+	border-radius: 8px;
+	padding: 1rem;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	text-decoration: none;
+	cursor: pointer;
+	outline: 1px solid transparent;
+	user-select: none;
+}
+
+.project:hover {
+	outline: 1px solid var(--outline-default);
+}
+
+.project:active {
+	outline: 1px solid var(--accent-primary-default);
+}
+
+.repl-image {
+	width: 4.5rem;
+	height: 4.5rem;
+	border-radius: 8px;
+  transform: translateY(4px);
+}
+
+.repl-name {
+	font-size: 1.4rem;
+}
+
+.repl-description {
+	color: var(--foreground-dimmer);
+}
+
+.socials {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.socials a {
+	filter: brightness(80%);
+	transform: scale(0.9);
+	
+	margin-right: 1.3rem;
+	height: 30px;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	gap: .3rem;
+	line-height: 0.8;
+}
+
+.socials a:hover {
+	transform: scale(1);
+	filter: brightness(100%);
+}
+
+.changeColors{
+  transition:all 200ms ease;
+  animation: changeColors 2s ease infinite;
+}
+
+@keyframes changeColors {
+0% {color: red; }
+10% {color: orange; }
+20% {color: yellow; }
+30% {color: #04ff00; }
+40% {color: #00ff9d; }
+50% {color: #0091ff; }
+60% {color: #0008ff; }
+70% {color: #8c00ff; }
+80% {color: #ff00c8; }
+90% {color: #ff0033; }
+100% {color: #ff0000; }
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+	.main-content {
+		width: 90vw;
+	}
+
+	.sections {
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.section {
+		max-width: 100%;
+	}
+ 
+}
+@media screen and (max-width: 500px) {
+	.username {
+		font-size: 1.5rem;
+	}
+}

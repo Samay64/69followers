@@ -1,0 +1,111 @@
+.follower {
+  position:relative;
+	width: 10rem;
+	background: var(--background-default);
+	border-radius: 8px;
+	padding: 0.4rem;
+	display: flex;
+  gap:0.2rem;
+  flex-direction:column;
+	align-items: center;
+  justify-content:center;
+	text-decoration: none;
+	cursor: pointer;
+	outline: 1px solid transparent;
+	user-select: none;
+}
+.link{
+  color:var(--accent-blue-dimmer);
+  text-decoration:none;
+}
+.follower:hover {
+	outline: 1px solid var(--outline-default);
+}
+
+.follower:active {
+	outline: 1px solid var(--accent-primary-default);
+}
+
+.fImage {
+	width: 4.5rem;
+	height: 4.5rem;
+	border-radius: 50%;
+  transform: translateY(4px);
+}
+.fImageL {
+	width: 4.5rem;
+	height: 4.5rem;
+	border-radius: 50%;
+  transform: translateY(4px);
+  background:var(--background-higher)
+}
+
+.fName {
+	font-size: 1rem;
+}
+.fNameL {
+	height: 1rem;
+  width:80%;
+  margin:0.6rem;
+  background:var(--background-higher);
+  border-radius:0.3rem;
+}
+
+.fUsername {
+	font-size: 0.8rem;
+	color: var(--foreground-dimmer);
+}
+.fUsernameL {
+	height: 0.8rem;
+  width:60%;
+  background:var(--background-higher);
+  border-radius:0.3rem;
+}
+
+.heading {
+	font-size: 1.6rem;
+	background: transparent;
+	width: fit-content;
+	text-shadow: 0 0 2rem var(--outline-strongest);
+	margin-bottom: 0.5rem;
+	margin-top: 1rem;
+}
+.specialRepl{
+  position:absolute;
+  top:0;
+  right:0;
+  padding:0.3rem;
+  font-size:0.8rem;
+  background:var( --background-higher);
+  border-radius:0 0.5rem 0 0.5rem;
+  color:var(--accent-primary-stronger) 
+}
+
+.followerWrap{
+  max-width:100%;
+  display:grid;
+  grid-template-columns:repeat(6,auto);
+  grid-gap:0.5rem;
+  margin:0;
+}
+
+@media screen and (max-width: 1420px) {
+  .followerWrap{
+    grid-template-columns:repeat(5,auto);
+  }
+}
+@media screen and (max-width: 1170px) {
+  .followerWrap{
+    grid-template-columns:repeat(4,auto);
+  }
+}
+@media screen and (max-width: 740px) {
+  .followerWrap{
+    grid-template-columns:repeat(3,auto);
+  }
+}
+@media screen and (max-width: 490px) {
+  .followerWrap{
+    grid-template-columns:repeat(2,auto);
+  }
+}

@@ -1,0 +1,60 @@
+.projects {
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
+}
+
+.project {
+  position:relative;
+	width: 100%;
+	background: var(--background-default);
+	border-radius: 8px;
+	padding: 1rem;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	text-decoration: none;
+	cursor: pointer;
+	outline: 1px solid transparent;
+	user-select: none;
+}
+
+.project:hover {
+	outline: 1px solid var(--outline-default);
+}
+
+.project:active {
+	outline: 1px solid var(--accent-primary-default);
+}
+
+.replImage {
+	width: 4.5rem;
+	height: 4.5rem;
+	border-radius: 8px;
+  transform: translateY(4px);
+}
+
+.replName {
+	font-size: 1.4rem;
+}
+
+.replDescription {
+	color: var(--foreground-dimmer);
+}
+
+.specialRepl{
+  position:absolute;
+  top:0;
+  right:0;
+  padding:0.3rem;
+  font-size:0.8rem;
+  background:var( --background-higher);
+  border-radius:0 0.5rem 0 0.5rem;
+  color:var(--accent-primary-stronger) 
+}
+
+.disabled{
+  opacity:0.5;
+  cursor:not-allowed;
+  pointer-events:none;
+}
