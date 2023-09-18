@@ -25,7 +25,7 @@ const Followers = ({followerCount})=>{
   
   return(
     <div>
-      <div className="heading">Followers</div>
+      <div className="heading">Road to 100 Followers</div>
             <p>
         thank you guys, you all means a lot to me, lots of love {'<3'} from my side  &nbsp; -_+ <Link href="https://replit.com/@CodeMagnon/" className={styles.link}>@CodeMagnon</Link>
       </p>

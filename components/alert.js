@@ -8,6 +8,7 @@ const Alert = ()=>{
   let isShown = alertObj.isShown;
 
   const handleOk =()=> {
+    alertObj.action()
       dispatch({
     type:'alertOff',
   })

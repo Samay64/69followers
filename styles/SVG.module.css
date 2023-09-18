@@ -1,0 +1,17 @@
+.svgWrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.svg{
+    position: absolute;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: all ease-in-out 0.3s;
+}
+
+
+.svg:active{
+    transform: scale(0.9);
+}

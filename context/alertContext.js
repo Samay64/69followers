@@ -11,6 +11,7 @@ const alertreducer = (alertObj,action)=>{
         type:'alert',
         title:action.title,
         body:action.body,
+        action:action.action,
         isShown:true
       }
     };
@@ -20,6 +21,7 @@ const alertreducer = (alertObj,action)=>{
         type:'confirm',
         title:action.title,
         body:action.body,
+        action:action.action,
         isShown:true
       }
     };
