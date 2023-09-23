@@ -22,7 +22,6 @@ export default function Home() {
     getCaptcha()
   return async ()=>{let word = await getWordle()
   setWordle(word)
-  console.log(word)
   await getMoonPhase()
 }
   }, [])
@@ -138,7 +137,6 @@ setcaptcha(newcaptcha)
   try {
     const response = await fetch(url, options);
     const result = await response.json();
-    console.log(result.moon.phase);
     setMoonPhase(result.moon.phase)
   } catch (error) {
     console.error(error);
@@ -193,7 +191,7 @@ setcaptcha(newcaptcha)
   },
   {
     title:"Rule 10",
-    body:"your password is now super strong 💪",
+    body:"<b>your password is now super strong 💪</b>",
     pass:checkObj.rule10,
   }
 
@@ -209,14 +207,19 @@ const handleSubmit = ()=>{
     if(password === ssPassword){
       dispatch({
         type:'confirm',
-        title:'Rick roll',
-        body:`Let's start this`,
+        title:'This message is for you',
+        body:`press ok to proceed`,
         action:()=>{setPlay(true);console.log('video played')},
       })
     }
   }
 }
 
+  if(level<=9){
+    if(play){ 
+    setPlay(false)
+    }
+  }
 
   return (
     <>
@@ -231,7 +234,7 @@ const handleSubmit = ()=>{
         <div className={styles.headingP}>The Password Game</div>
         <div className={styles.mssg}>(make your password super strong)</div>
         <div className={styles.flex}>
-        <textarea type="text" placeholder='Enter your Password' className={`${styles.input} ${level>=9?styles.strongPassword:''}`} onChange={(e)=>{handlePasswordChange(e)}} ref={inputRef} disabled = {level >= 10}/>
+        <textarea type="text" placeholder='Enter your Password' className={`${styles.input} ${level>=10?styles.strongPassword:''}`} onChange={(e)=>{handlePasswordChange(e)}} ref={inputRef} disabled = {level >= 10}/>
         <Copy onClick={handleCopy}/>
         </div>
         <div className={styles.wrapper}>
@@ -257,9 +260,9 @@ const handleSubmit = ()=>{
         </div>
         </div>
       <div className={styles.sectionP}>
-        <h1>Top Secret</h1>
+        <h1>Special Message for You</h1>
       {!play && <Image className={styles.secretI}  src='/assets/images/secret.png' height={140} width={200} alt="secret message"/>}
-       {play && <video className={styles.secretV} autoPlay loop>
+       {play && <video className={styles.secretV} autoPlay loop preload='auto'>
           <source src='/assets/videos/secret.mp4' />
         </video>}
         <h3>*only a strong password can open this file</h3>

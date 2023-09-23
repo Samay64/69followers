@@ -10,7 +10,7 @@ const Notify = ({title,body,pass,special}) => {
 
   return (
     <div className={`${styles.notification} ${pass?styles.pass:styles.fail}`}>
-    <div className={styles.title}>{title} {pass?'✔':'✘'}  </div>
+    <div className={styles.title}><b>{title} {pass?'✔':'✘'} </b> </div>
     <div className={styles.body} dangerouslySetInnerHTML={{__html:body}}></div>
     {/* word guesser */}
     {title.includes('6') && <div className={styles.imageWrapper}>

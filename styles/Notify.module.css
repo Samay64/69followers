@@ -90,6 +90,7 @@
     font-style: sans-serif;
     font-weight: 100;
     left:-26px;
+    user-select:none;
   }
 
 .captchaCode{
