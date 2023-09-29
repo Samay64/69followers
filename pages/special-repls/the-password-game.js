@@ -79,6 +79,7 @@ if(captcha !== ''){
 }
 
 if(moonPhase){
+  console.log(moonPhase)
   let phases ={
     'New Moon': '🌑',
 'Waxing Crescent Moon': '🌒',

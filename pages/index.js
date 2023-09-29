@@ -108,7 +108,7 @@ export default function Home() {
       <div className="projects">
       <div className="heading">Repls you can checkout</div>
         <Repl replData={{replName:"The password game (99% fail)",replDesc:"the most famous password game is now on replit",specialRepl:"new",href:"/special-repls/the-password-game",img:"/assets/images/password.jpg"}}/>
-        <Repl replData={{replName:"10 sec Game",replDesc:"press the buzzer at 10 seconds and get a surprise",specialRepl:"new",href:"/special-repls/10-sec-game",img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ3mpQCEVv_IgGAtR7Z_iiTdYitUNo6-iD0g&usqp=CAU"}}/>
+        <Repl replData={{replName:"10 sec Game",replDesc:"press the buzzer at 10 seconds and get a surprise",href:"/special-repls/10-sec-game",img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ3mpQCEVv_IgGAtR7Z_iiTdYitUNo6-iD0g&usqp=CAU"}}/>
         <Repl replData={{replName:"Coming soon",replDesc:"...",specialRepl:"coming soon",href:"#",img:""}}/>
 
 </div>

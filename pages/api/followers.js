@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         'Referrer': 'https://replit.com/',
         'Cookie': '',
       },
-      "body":process.env.GET_FOLLOWERS,
+      "body":`{"operationName":"userByUsername","variables":{"username":"CodeMagnon"},"query":"query userByUsername($username: String!) { userByUsername(username: $username) { id username followerCount __typename }}"}`,
       "method": "POST"
     })
   let data = await response.json();
