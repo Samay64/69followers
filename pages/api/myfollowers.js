@@ -6,6 +6,7 @@ export default async function handler(req, res) {
   const db = new client()
   const cm = process.env.NEW_COOK
   const query = req.query
+  console.log(query)
   let response = await fetch("https://replit.com/graphql?a="+Math.random()+Math.random(), {
       "cache": "no-cache",
       "headers": {
@@ -20,7 +21,7 @@ export default async function handler(req, res) {
         "operationName": "FollowModalFollowers",
         "variables": {
             "username": "CodeMagnon",
-            "count": 20
+            "count": Number.parseInt(query.count)
         },
         "query": "query FollowModalFollowers($username: String!, $after: String, $count: Int) {\n  currentUser {\n    id\n    __typename\n  }\n  user: userByUsername(username: $username) {\n    id\n    followers(after: $after, count: $count) {\n      items {\n        id\n        ...FollowModalUser\n        __typename\n      }\n      pageInfo {\n        hasNextPage\n        nextCursor\n        __typename\n      }\n      __typename\n    }\n    __typename\n  }\n}\n\nfragment FollowModalUser on User {\n  ...UserLinkUser\n  id\n  username\n  fullName\n  image\n  isFollowedByCurrentUser\n  followerCount\n  __typename\n}\n\nfragment UserLinkUser on User {\n  id\n  url\n  username\n  __typename\n}\n"
     }),
